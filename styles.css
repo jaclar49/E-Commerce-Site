@@ -154,7 +154,7 @@ button:active {
 
 #highlights:after,
 #highlights:before {
-  background: url("wave.svg");
+  background: url("./assets/wave.svg");
   content: "";
   position: absolute;
   left: 0;
@@ -227,6 +227,7 @@ button:active {
 
 .games {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .game {
@@ -271,3 +272,18 @@ button:active {
     padding-right: 6px;
     color: #bfbfbf;
 }
+
+#recents {
+    padding-top: 8vw;
+    
+}
+
+/*EXPLORE*/
+
+#explore {
+    background-color: rgba(115, 66, 214, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
