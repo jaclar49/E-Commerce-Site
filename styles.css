@@ -89,6 +89,66 @@ li {
   text-decoration: none;
 }
 
+.btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    color: #7342d6;
+    display: none;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #242424;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu--open .menu__backdrop {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__list {
+    padding: 32px 0;
+}
+
+.menu__link {
+    font-size: 40px;
+    color: white;
+}
+
+.btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: white;
+}
+
+/*LANDING*/
+
 #landing {
   background-color: rgba(115, 66, 214, 0.1);
 }
@@ -199,6 +259,7 @@ button:active {
 
 .highlight__wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .highlight {
@@ -206,7 +267,6 @@ button:active {
   width: calc(100% / 3);
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 
@@ -238,6 +298,7 @@ button:active {
 .highlight__subtitile {
   font-size: 20px;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 /*FEATURES*/
@@ -258,7 +319,7 @@ button:active {
 }
 
 .game__img {
-    height: 300px;
+    height: 200px;
     transition: all 300ms ease;
     cursor: not-allowed;
 }
@@ -334,4 +395,48 @@ footer {
 
 .footer__link {
     padding: 0 8px;
+}
+
+/*SMALL PHONES, TABLETS, LARGE SMARTPHONES*/
+@media (max-width: 768px) {
+    .header__description {
+        padding: 0 24px;
+
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    .game {
+        width: 50%;
+    }
+}
+
+/*SMALL AND LARGE PHONES*/
+@media (max-width: 550px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .highlight {
+        width: 100%;
+
+    }
+
+    .highlight:not(:last-child) {
+        margin-bottom: 24px;
+    }
 }
